@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRAD Design System — Full Showcase</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="drad-design-system.css">
+<style>
+body { background: #f3f4f6; padding: 0; margin: 0; }
+.page { max-width: 960px; margin: 0 auto; padding: 48px 32px; display: flex; flex-direction: column; gap: 48px; }
+.section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #8c8c8c; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb; }
+.demo-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.demo-col { display: flex; flex-direction: column; gap: 12px; }
+h1.logo { font-size: 28px; font-weight: 700; color: #1c1c1e; }
+h1.logo span { color: #006fcf; }
+.subtitle { font-size: 16px; color: #666; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div>
+    <h1 class="logo">DR<span>AD</span> Design System</h1>
+    <p class="subtitle">Full component showcase — v1.0</p>
+  </div>
+
+  <!-- Typography -->
+  <div>
+    <div class="section-title">Typography</div>
+    <div class="demo-col">
+      <div class="text-display">Enterprise Data Request Portal</div>
+      <div class="text-heading">Request Details</div>
+      <div class="text-subhead">Suppression Requests</div>
+      <div class="text-body">This is standard body text used throughout the application for descriptions, content areas, and general reading. It uses Inter at 16px with a line height of 1.6.</div>
+      <div class="text-sm">Supporting small text — 12px muted</div>
+      <div class="text-xs">Caption text — 11px disabled</div>
+      <div class="text-label">Section label</div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div>
+    <div class="section-title">Buttons</div>
+    <div class="demo-col">
+      <div class="demo-row">
+        <button class="btn btn-primary"><i class="ti ti-send" aria-hidden="true"></i>Submit</button>
+        <button class="btn btn-secondary">Save draft</button>
+        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-ghost">Cancel</button>
+        <button class="btn btn-primary" disabled>Disabled</button>
+      </div>
+      <div class="demo-row">
+        <button class="btn btn-primary btn-sm">Primary sm</button>
+        <button class="btn btn-secondary btn-sm">Secondary sm</button>
+        <button class="btn btn-danger btn-sm">Danger sm</button>
+        <button class="btn btn-ghost btn-sm">Ghost sm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inputs -->
+  <div>
+    <div class="section-title">Input Fields</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:700px">
+      <div class="field">
+        <label class="field-label">Email address <span class="field-req">*</span></label>
+        <input type="email" placeholder="you@company.com">
+        <span class="field-hint">We'll never share your email.</span>
+      </div>
+      <div class="field">
+        <label class="field-label">Error state</label>
+        <input type="email" class="input-error" value="invalid@">
+        <span class="field-error"><i class="ti ti-alert-circle"></i> Enter a valid email</span>
+      </div>
+      <div class="field" style="position:relative">
+        <label class="field-label">Request type</label>
+        <select>
+          <option>Suppression</option>
+          <option>Extraction</option>
+          <option>Automation</option>
+        </select>
+        <i class="ti ti-chevron-down" style="position:absolute;right:12px;bottom:14px;pointer-events:none;color:#8c8c8c;font-size:16px"></i>
+      </div>
+      <div class="field">
+        <label class="field-label">Disabled</label>
+        <input type="text" value="Read only value" disabled>
+      </div>
+      <div class="field" style="grid-column:1/-1">
+        <label class="field-label">Message</label>
+        <textarea placeholder="Enter your message..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkbox & Radio -->
+  <div>
+    <div class="section-title">Checkbox & Radio</div>
+    <div class="demo-row" style="gap:40px;align-items:flex-start">
+      <div class="demo-col">
+        <label class="checkbox"><input type="checkbox"><div class="checkbox-box"></div><span class="checkbox-label">Unchecked</span></label>
+        <label class="checkbox"><input type="checkbox" checked><div class="checkbox-box"></div><span class="checkbox-label">Checked</span></label>
+        <label class="checkbox" style="opacity:0.45"><input type="checkbox" disabled><div class="checkbox-box"></div><span class="checkbox-label">Disabled</span></label>
+      </div>
+      <div class="demo-col">
+        <label class="radio"><input type="radio" name="r1"><div class="radio-ring"></div><span class="radio-label">Unselected</span></label>
+        <label class="radio"><input type="radio" name="r1" checked><div class="radio-ring"></div><span class="radio-label">Selected</span></label>
+        <label class="radio" style="opacity:0.45"><input type="radio" name="r1" disabled><div class="radio-ring"></div><span class="radio-label">Disabled</span></label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chips & Tags -->
+  <div>
+    <div class="section-title">Chips & Tags</div>
+    <div class="demo-col">
+      <div class="demo-row">
+        <div class="chip active">One time</div>
+        <div class="chip">Weekly</div>
+        <div class="chip">Monthly</div>
+        <div class="chip">Quarterly</div>
+      </div>
+      <div class="tag-input-wrap" style="max-width:420px">
+        <span class="tag">A. Patel <button class="tag-close">&times;</button></span>
+        <span class="tag">M. Chen <button class="tag-close">&times;</button></span>
+        <input placeholder="Add person...">
+      </div>
+    </div>
+  </div>
+
+  <!-- Badges & Status -->
+  <div>
+    <div class="section-title">Badges & Status</div>
+    <div class="demo-col">
+      <div class="demo-row">
+        <span class="badge badge-green">Approved</span>
+        <span class="badge badge-blue">In review</span>
+        <span class="badge badge-amber">Pending</span>
+        <span class="badge badge-red">Rejected</span>
+      </div>
+      <div class="demo-row" style="gap:24px">
+        <span class="status status-success"><span class="status-dot"></span>Completed</span>
+        <span class="status status-warning"><span class="status-dot"></span>In progress</span>
+        <span class="status status-error"><span class="status-dot"></span>Failed</span>
+        <span class="status status-info"><span class="status-dot"></span>In review</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div>
+    <div class="section-title">Tabs</div>
+    <div class="tabs">
+      <div class="tab active">My Requests</div>
+      <div class="tab">All Requests</div>
+      <div class="tab">Archive</div>
+      <div class="tab">Settings</div>
+    </div>
+    <div style="padding:16px 0;font-size:14px;color:#666">Currently showing: My Requests</div>
+  </div>
+
+  <!-- Tooltips -->
+  <div>
+    <div class="section-title">Tooltips — all directions × all themes</div>
+    <div class="demo-row" style="gap:32px;padding:24px 0;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div class="tooltip-wrap">
+          <button class="btn btn-secondary btn-sm">Top dark</button>
+          <div class="tooltip tooltip-dark tooltip-top">Tooltip — top</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div class="tooltip-wrap">
+          <button class="btn btn-secondary btn-sm">Bottom light</button>
+          <div class="tooltip tooltip-light tooltip-bottom">Tooltip — bottom</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div class="tooltip-wrap">
+          <button class="btn btn-secondary btn-sm">Left error</button>
+          <div class="tooltip tooltip-error tooltip-left">Tooltip — left</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div class="tooltip-wrap">
+          <button class="btn btn-secondary btn-sm">Right success</button>
+          <div class="tooltip tooltip-success tooltip-right">Tooltip — right</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alerts -->
+  <div>
+    <div class="section-title">Alerts / Notes</div>
+    <div class="demo-col">
+      <div class="alert alert-info"><i class="ti ti-info-circle alert-icon"></i><div><div class="alert-title">Information</div><div class="alert-body">This is an informational alert with supporting description text.</div></div></div>
+      <div class="alert alert-success"><i class="ti ti-circle-check alert-icon"></i><div><div class="alert-title">Success</div><div class="alert-body">Your request has been submitted successfully.</div></div></div>
+      <div class="alert alert-warning"><i class="ti ti-alert-triangle alert-icon"></i><div><div class="alert-title">Warning</div><div class="alert-body">This action may affect downstream processes.</div></div></div>
+      <div class="alert alert-error"><i class="ti ti-alert-circle alert-icon"></i><div><div class="alert-title">Error</div><div class="alert-body">Something went wrong. Please try again.</div></div></div>
+    </div>
+  </div>
+
+  <!-- Banners -->
+  <div>
+    <div class="section-title">Notification Banners</div>
+    <div class="demo-col">
+      <div class="banner banner-info"><i class="ti ti-info-circle" style="font-size:18px;flex-shrink:0;margin-top:1px"></i><div class="banner-content"><div class="banner-title">System update scheduled</div><div class="banner-desc">The platform will undergo maintenance on Saturday 3–5 AM IST.</div></div><button class="banner-close">&times;</button></div>
+      <div class="banner banner-success"><i class="ti ti-circle-check" style="font-size:18px;flex-shrink:0;margin-top:1px"></i><div class="banner-content"><div class="banner-title">Request approved</div><div class="banner-desc">D7389501 has been approved and is ready for data extraction.</div></div><button class="banner-close">&times;</button></div>
+      <div class="banner banner-warning"><i class="ti ti-alert-triangle" style="font-size:18px;flex-shrink:0;margin-top:1px"></i><div class="banner-content"><div class="banner-title">Approval pending</div><div class="banner-desc">Your request is awaiting L2 approval. SLA: 2 days remaining.</div></div><button class="banner-close">&times;</button></div>
+      <div class="banner banner-error"><i class="ti ti-alert-circle" style="font-size:18px;flex-shrink:0;margin-top:1px"></i><div class="banner-content"><div class="banner-title">Request rejected</div><div class="banner-desc">D7389502 was rejected. Please review the comments and resubmit.</div></div><button class="banner-close">&times;</button></div>
+    </div>
+  </div>
+
+  <!-- Accordion -->
+  <div>
+    <div class="section-title">Accordion</div>
+    <div class="accordion" style="max-width:560px">
+      <div class="accordion-item">
+        <div class="accordion-trigger open"><span class="accordion-title">What is DRAD?</span><i class="ti ti-chevron-up"></i></div>
+        <div class="accordion-body">DRAD is the enterprise Data Request & Automation Dashboard for managing suppression, extraction, and automation workflows.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-trigger"><span class="accordion-title">How do I raise a request?</span><i class="ti ti-chevron-down"></i></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-trigger"><span class="accordion-title">Who approves my request?</span><i class="ti ti-chevron-down"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div>
+    <div class="section-title">Cards</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:700px">
+      <div class="card">
+        <div class="card-header">Standard card</div>
+        <p class="text-body">Card content with supporting description text and general information.</p>
+      </div>
+      <div class="card card-accent">
+        <div class="card-header">Accent card</div>
+        <p class="text-body">Featured or highlighted content with primary color top border.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stat Strip -->
+  <div>
+    <div class="section-title">Stat Strip (KPI Row)</div>
+    <div class="stat-strip">
+      <div class="stat-cell"><div class="stat-label">Records matched</div><div class="stat-value primary">22,771</div></div>
+      <div class="stat-cell"><div class="stat-label">Quality score</div><div class="stat-value success">98.5%</div></div>
+      <div class="stat-cell"><div class="stat-label">Processing time</div><div class="stat-value">2.4 sec</div></div>
+      <div class="stat-cell"><div class="stat-label">Status</div><div class="stat-value success">Ready</div></div>
+    </div>
+  </div>
+
+  <!-- Data Table -->
+  <div>
+    <div class="section-title">Data Table</div>
+    <div class="table-wrap">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th>Request ID</th>
+            <th>Requested By</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Records</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:700">D7389501</td>
+            <td>A. Patel</td>
+            <td>Suppression</td>
+            <td><span class="badge badge-green">Approved</span></td>
+            <td>22,771</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">D7389502</td>
+            <td>M. Chen</td>
+            <td>Extraction</td>
+            <td><span class="badge badge-blue">In review</span></td>
+            <td>15,420</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700">D7389503</td>
+            <td>R. Singh</td>
+            <td>Suppression</td>
+            <td><span class="badge badge-amber">Pending</span></td>
+            <td>8,950</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Expanded Rows -->
+  <div>
+    <div class="section-title">Expanded Rows Table</div>
+    <div class="table-wrap">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th style="width:32px"></th>
+            <th>Request ID</th>
+            <th>Status</th>
+            <th>Records</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="dt-expand-trigger" onclick="var e=document.getElementById('exp1');e.style.display=e.style.display==='none'?'table-row':'none'">
+            <td><i class="ti ti-chevron-right"></i></td>
+            <td style="font-weight:700">D7389501</td>
+            <td><span class="badge badge-green">Approved</span></td>
+            <td>22,771</td>
+          </tr>
+          <tr id="exp1" style="display:none">
+            <td colspan="4"><div class="dt-expand-body">
+              <strong style="font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#006fcf">Approval History</strong>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
+                <div style="background:#fff;border-radius:6px;padding:12px;border:1px solid #b5d7f4"><div class="text-label" style="margin-bottom:4px">L1 Approval</div><div style="font-weight:600">A. Sharma</div><div class="text-xs" style="margin-top:2px">Jan 11, 2024</div></div>
+                <div style="background:#fff;border-radius:6px;padding:12px;border:1px solid #b5d7f4"><div class="text-label" style="margin-bottom:4px">L2 Approval</div><div style="font-weight:600">V. Mehta</div><div class="text-xs" style="margin-top:2px">Jan 12, 2024</div></div>
+                <div style="background:#fff;border-radius:6px;padding:12px;border:1px solid #b5d7f4"><div class="text-label" style="margin-bottom:4px">Data Delivery</div><div style="font-weight:600">System</div><div class="text-xs" style="margin-top:2px">Jan 13, 2024</div></div>
+              </div>
+            </div></td>
+          </tr>
+          <tr>
+            <td><i class="ti ti-chevron-right"></i></td>
+            <td style="font-weight:700">D7389502</td>
+            <td><span class="badge badge-blue">In review</span></td>
+            <td>15,420</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Stepper Horizontal -->
+  <div>
+    <div class="section-title">Form Stepper — Horizontal</div>
+    <div class="stepper">
+      <div class="stepper-step done"><div class="stepper-node"><i class="ti ti-check"></i></div><div class="stepper-label">User Details</div></div>
+      <div class="stepper-step done"><div class="stepper-node"><i class="ti ti-check"></i></div><div class="stepper-label">Schedule</div></div>
+      <div class="stepper-step active"><div class="stepper-node">3</div><div class="stepper-label">Review</div></div>
+      <div class="stepper-step"><div class="stepper-node">4</div><div class="stepper-label">Submit</div></div>
+    </div>
+  </div>
+
+  <!-- Stepper Vertical -->
+  <div>
+    <div class="section-title">Form Stepper — Vertical</div>
+    <div class="stepper-v" style="max-width:280px">
+      <div class="stepper-v-step done">
+        <div class="stepper-v-rail"><div class="stepper-v-node"><i class="ti ti-check"></i></div><div class="stepper-v-line"></div></div>
+        <div class="stepper-v-content"><div class="stepper-v-title">User Details</div><div class="stepper-v-sub">Completed</div></div>
+      </div>
+      <div class="stepper-v-step active">
+        <div class="stepper-v-rail"><div class="stepper-v-node">2</div><div class="stepper-v-line"></div></div>
+        <div class="stepper-v-content"><div class="stepper-v-title">Schedule</div><div class="stepper-v-sub">In progress</div></div>
+      </div>
+      <div class="stepper-v-step">
+        <div class="stepper-v-rail"><div class="stepper-v-node">3</div></div>
+        <div class="stepper-v-content"><div class="stepper-v-title">Submit</div><div class="stepper-v-sub">Pending</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Domino Tracker -->
+  <div>
+    <div class="section-title">Domino Tracker (Pipeline)</div>
+    <div class="domino-track">
+      <div class="domino-stage done"><div class="domino-node"><i class="ti ti-check" style="font-size:12px"></i></div><div class="domino-stage-label">Request Raised</div><div class="domino-stage-sub">Jan 10</div></div>
+      <div class="domino-stage done"><div class="domino-node"><i class="ti ti-check" style="font-size:12px"></i></div><div class="domino-stage-label">Query Simulation</div><div class="domino-stage-sub">Jan 11</div></div>
+      <div class="domino-stage done"><div class="domino-node"><i class="ti ti-check" style="font-size:12px"></i></div><div class="domino-stage-label">L1 Approval</div><div class="domino-stage-sub">Jan 12</div></div>
+      <div class="domino-stage active"><div class="domino-node"><i class="ti ti-loader" style="font-size:12px"></i></div><div class="domino-stage-label">L2 Approval</div><div class="domino-stage-sub">Pending</div></div>
+      <div class="domino-stage"><div class="domino-node">5</div><div class="domino-stage-label">Data Extraction</div><div class="domino-stage-sub">Waiting</div></div>
+      <div class="domino-stage"><div class="domino-node">6</div><div class="domino-stage-label">Delivery</div><div class="domino-stage-sub">Waiting</div></div>
+    </div>
+  </div>
+
+  <!-- Summary Block -->
+  <div>
+    <div class="section-title">Summary Block</div>
+    <div class="summary" style="max-width:480px">
+      <div class="summary-header">Request details</div>
+      <div class="summary-row"><span class="summary-key">Request ID</span><span class="summary-val">D7389501</span></div>
+      <div class="summary-row"><span class="summary-key">Type</span><span class="summary-val">Suppression</span></div>
+      <div class="summary-row"><span class="summary-key">Created by</span><span class="summary-val">A. Patel</span></div>
+      <div class="summary-row"><span class="summary-key">Status</span><span class="summary-val"><span class="badge badge-green">Approved</span></span></div>
+      <div class="summary-row"><span class="summary-key">Records affected</span><span class="summary-val">22,771</span></div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div>
+    <div class="section-title">Breadcrumb</div>
+    <nav class="breadcrumb">
+      <a class="breadcrumb-item" href="#">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <a class="breadcrumb-item" href="#">Requests</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">D7389501</span>
+    </nav>
+  </div>
+
+  <!-- Pagination -->
+  <div>
+    <div class="section-title">Pagination</div>
+    <div style="display:flex;align-items:center;justify-content:space-between;max-width:600px">
+      <span class="text-sm">Showing 1–8 of 24 results</span>
+      <div class="pagination">
+        <button class="page-btn" disabled>←</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">...</button>
+        <button class="page-btn">8</button>
+        <button class="page-btn">→</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal trigger -->
+  <div>
+    <div class="section-title">Modal</div>
+    <button class="btn btn-secondary" onclick="document.getElementById('modal-demo').style.display='flex'">Open modal demo</button>
+    <div class="modal-overlay" id="modal-demo" style="display:none" onclick="if(event.target===this)this.style.display='none'">
+      <div class="modal">
+        <div class="modal-header">
+          <span class="modal-title">Confirm action</span>
+          <button class="modal-close" onclick="document.getElementById('modal-demo').style.display='none'">&times;</button>
+        </div>
+        <div class="modal-body">Are you sure you want to submit this request? This will trigger the approval workflow and notify all stakeholders.</div>
+        <div class="modal-footer">
+          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('modal-demo').style.display='none'">Cancel</button>
+          <button class="btn btn-primary btn-sm">Submit request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Screen -->
+  <div>
+    <div class="section-title">Success Screen</div>
+    <div class="card" style="max-width:480px">
+      <div class="success-screen">
+        <div class="success-icon"><i class="ti ti-check" style="font-size:28px;color:var(--success)"></i></div>
+        <div class="success-title">Request submitted!</div>
+        <div class="success-desc">Your request <span class="badge badge-blue">D7389501</span> has been received and is pending L1 approval.</div>
+        <button class="btn btn-primary">View request status</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:48px"></div>
+
+</div>
+</body>
+</html>
